@@ -1,0 +1,53 @@
+syntax = "proto3";
+
+package pb.v1;
+
+import "google/api/annotations.proto";
+
+option go_package = ".;v1";
+
+// The greeting service definition.
+service Logger {
+    // Sends a greeting
+    rpc Info0 (LogInfo) returns (LogInfoResponse) {}
+    rpc LogFilterData (FilterDataRequest) returns (FilterDataResponse) {
+        option(google.api.http) = {
+          post: "/v1/logger/LogFilterData"
+          body: "*"
+       };
+    }
+}
+
+// The request message containing the user's name.
+message LogInfo {
+    string message =1;
+    int64 msec =2;
+    string userIp =3;
+    string exception =4;
+    string timeSpan =5;
+    string level =6;
+    string logger =7;
+    string createTime =8;
+    string logType =9;
+    string traceId =10;
+}
+
+// The response message containing the greetings.
+message LogInfoResponse
+{
+    int32 errorCode = 1;
+    string errorMessage = 2;
+}
+
+message FilterDataRequest
+{
+    string url =1;
+    string appName =2;
+    string data =3;
+}
+
+message FilterDataResponse
+{
+    int32 errorCode = 1;
+    string errorMessage = 2;
+}
