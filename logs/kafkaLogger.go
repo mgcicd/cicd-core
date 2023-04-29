@@ -1,8 +1,6 @@
 package logs
 
 import (
-	"cicd-core/config/connection"
-	"cicd-core/util"
 	"errors"
 	"fmt"
 	"log"
@@ -12,7 +10,10 @@ import (
 	"sync"
 	"time"
 
-	v1 "cicd-core/pb/v1"
+	"github.com/mgcicd/cicd-core/config/connection"
+	"github.com/mgcicd/cicd-core/util"
+
+	v1 "github.com/mgcicd/cicd-core/pb/v1"
 
 	"github.com/Shopify/sarama"
 )

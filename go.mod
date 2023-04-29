@@ -1,4 +1,4 @@
-module cicd-core
+module github.com/mgcicd/cicd-core
 
 go 1.14
 

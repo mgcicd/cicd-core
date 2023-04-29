@@ -1,7 +1,7 @@
 package connection
 
 import (
-	common2 "cicd-core/config/common"
+	common2 "github.com/mgcicd/cicd-core/config/common"
 )
 
 func Value(connName string) string {

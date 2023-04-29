@@ -8,9 +8,9 @@ import (
 	"sync"
 	"time"
 
-	"cicd-core/config/envoy"
-	"cicd-core/util"
-	zk2 "cicd-core/zookeeper"
+	"github.com/mgcicd/cicd-core/config/envoy"
+	"github.com/mgcicd/cicd-core/util"
+	zk2 "github.com/mgcicd/cicd-core/zookeeper"
 
 	"github.com/pkg/errors"
 	"github.com/samuel/go-zookeeper/zk"
