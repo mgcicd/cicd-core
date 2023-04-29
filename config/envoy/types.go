@@ -8,7 +8,7 @@ import (
 	"strconv"
 	"strings"
 
-	"cicd-core/util"
+	"github.com/mgcicd/cicd-core/util"
 )
 
 type ListenerProtocol string
